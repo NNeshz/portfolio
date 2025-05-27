@@ -1,0 +1,41 @@
+---
+interface Props {
+  experience: {
+    company: string;
+    position: string;
+    date: string;
+    description: string;
+    highlights: string[];
+  }
+}
+
+const { experience } = Astro.props;
+---
+
+<div class="max-w-xl p-10 flex flex-col gap-5 rounded-[1rem] bg-card">
+  <div class="md:col-span-2 flex flex-col gap-3">
+    <div class="flex flex-col">
+      <h3 class="text-muted-foreground font-bold text-sm sm:text-normal tracking-tighter">
+        {experience.company}
+      </h3>
+      <h4 class="text text-sm sm:font-normal md:text-2xl tracking-tighter">
+        {experience.position}
+      </h4>
+      <time class="text-sm sm:text-normal tracking-tighter text-muted-foreground">
+        {experience.date}
+      </time>
+    </div>
+  </div>
+  <div class="relative flex flex-col gap-5 pb-4 md:col-span-3">
+    <p class="text-sm sm:text-normal md:text-lg tracking-tighter">
+      {experience.description}
+    </p>
+    <ul class="list-disc list-inside">
+      {experience.highlights.map((highlight) => (
+        <li class="text-muted-foreground text-xs sm:text-sm md:text-normal">
+          {highlight}
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>

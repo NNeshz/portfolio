@@ -1,22 +1,26 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import BaseHead from "@/components/global/BaseHead.astro";
+import LanguagePicker from "@/components/global/LanguagePicker.astro";
+import Navigation from "@/components/global/Navigation.astro";
+import Footer from "@/components/global/Footer.astro";
+import "@fontsource/geist-sans";
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+import { getLangFromUrl } from "@/i18n";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth font-geist-sans">
+  <head>
+    <BaseHead />
+  </head>
+  <body class="flex flex-col min-h-screen mx-auto 2xl:max-w-screen-xl relative">
+    <LanguagePicker />
+    <Navigation />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

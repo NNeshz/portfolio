@@ -1,0 +1,37 @@
+---
+import NNeshzLetter from "../icons/NNeshzLetter.astro";
+import { getLangFromUrl, useTranslations } from "../i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="overflow-hidden relative">
+  <NNeshzLetter className="w-full top-0 left-0 z-0" fill="currentColor" stroke="currentColor" />
+  {/* Floating orbs for glassmorphism effect */}
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[30vw] h-[30vw] bg-foreground/5 rounded-full blur-3xl"></div>
+
+  <div class="px-8 md:px-0 py-10 md:py-24 max-w-4xl mx-auto relative">
+    <div>
+      <h2
+        class="text-6xl mt-8 md:mt-12 tracking-tighter font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+      >
+        ⏤ {t["hero.name"]}
+        <span class="block text-foreground text-5xl">
+          {t["hero.title"]}
+        </span>
+      </h2>
+    </div>
+
+    <ul class="grid grid-cols-1 text-base lg:grid-cols-2 gap-4 max-w-4xl group h-full mt-12">
+      <p>{t["hero.description1"]}</p>
+      <p>{t["hero.description2"]}</p>
+      <em class="col-span-full text-sm mt-2 md:mt-12 text-center">
+        <p>
+          {t["hero.quote"]}
+          <span class="block">⏤ {t["hero.quoteAuthor"]}</span>
+        </p>
+      </em>
+    </ul>
+  </div>
+</section>
