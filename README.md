@@ -1,9 +1,10 @@
-# 🌑 Portfolio Minimalista | [nneshz](https://tu-portfolio.vercel.app)  
+# 🌑 Portfolio Minimalista | [nneshz](https://nneshz.vercel.app)  
 
 **Portfolio técnico open-source** con diseño blanco/negro, i18n y componentes accesibles. Desarrollado con Astro 5, React 19 y shadcn/ui.  
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnneshz%2Fportfolio)  
-![Demo](https://raw.githubusercontent.com/nneshz/portfolio/main/public/social-preview.png)  
+![Captura desde 2025-05-27 17-34-44 (Editado)](https://github.com/user-attachments/assets/2174380c-c964-45b9-a64d-631d106a50f7)
+
 
 ## ✨ Características  
 - **🚀 Astro 5 + React 19**: Rendimiento estático con islands architecture.  
@@ -58,7 +59,7 @@ bun run dev
 MIT License. **¡Usa y adapta libremente!**  
 
 ---  
-**🔗 Demo**: [portfolio-nneshz.vercel.app](https://portfolio-nneshz.vercel.app)  
+**🔗 Demo**: [nneshz.vercel.app](https://nneshz.vercel.app)  
 **🐞 Issues/Contribuciones**: ¡Bienvenidas!  
 
 ---  
