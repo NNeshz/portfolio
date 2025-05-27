@@ -36,4 +36,5 @@ export type UIContent = {
   "contact.title.2": string;
   "contact.description": string;
   "contact.button": string;
+  "contact.message": string;
 };

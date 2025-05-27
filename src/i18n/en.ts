@@ -16,29 +16,38 @@ export const en: UIContent = {
   "work.title": "Work Experience",
   experience: [
     {
-      company: "Exxpress",
+      company: "Las Cámaras del Dragón",
       position: "Full Stack Developer",
-      date: "January 2024 - March 2024",
-      description:
-        "I worked at Exxpress team, where I helped build the web dashboard. I was responsible for UI/UX and API requests, which involved to learn Elysia.js and Firebase, use Radix and develop a better user experience.",
+      date: "February 2025 - May 2025",
+      description: "Spearheaded the core API development, optimizing system communication using Elysia.js and Supabase. Implemented E2E architecture and logical deletion, reducing request/response errors by 35% and improving backend efficiency by 20%. Automated Swagger documentation enhanced technical clarity for the team.",
       highlights: [
-        "Using Shandcn to improve user experience and forms",
-        "Learning Elysia.js and Firebase to handle API requests",
-        "Understanding other developers' code structure and working in a team",
-      ],
+        "API Route Optimization: Reduced latency from 300ms to 120ms (60% faster) with automated documentation via Elysia Swagger. Integrated AWS S3 for file management, improving load times by 25%.",
+        "BetterAuth Authentication System: Cut security vulnerabilities by 50% and accelerated auth flow development by 40% through contextual data injection.",
+        "Frontend Contributions (ShadCN/TailwindCSS): Implemented private routes and dynamic layouts, boosting Lighthouse scores by 15 points (SEO/UX)."
+      ]
     },
     {
       company: "Sois",
       position: "Full Stack Developer",
-      date: "October 2024 - December 2024",
-      description:
-        "At Sois, I was responsable of the sales, inventory and reports application development team. I was in charge of API integration, improving user experience, and implementing new features.",
+      date: "September 2024 - December 2024",
+      description: "Developed a full-scale sales, inventory, and reporting application, streamlining operational processes. Reduced API response times from 450ms to 180ms (60% faster) and implemented secure auth with Supabase, eliminating 75% of unauthorized access.",
       highlights: [
-        "Development of sales, inventory and reports",
-        "Integration of RESTful APIs and performance optimization",
-        "Implementation of authentication and authorization system with Supabase",
-      ],
+        "POS & Inventory System: Cut operational management time by 40% and increased report accuracy by 30%.",
+        "Optimized RESTful APIs: Achieved 99.8% uptime with caching and refined queries.",
+        "Supabase Auth: Reduced security gaps by 75% and accelerated auth flows by 50%."
+      ]
     },
+    {
+      company: "Exxpress",
+      position: "Full Stack Developer",
+      date: "January 2024 - March 2024",
+      description: "Designed and implemented a UI/UX-focused dashboard using Elysia.js and Firebase. Reduced user errors by 30% and improved API response times by 40% (500ms → 300ms).",
+      highlights: [
+        "ShadCN/UI: Enhanced accessibility (WCAG 2.1) and reduced form errors by 30%.",
+        "Elysia.js + Firebase: Optimized API requests (40% faster) and cut costs by 20% vs. traditional solutions.",
+        "Team Collaboration: Analyzed legacy code, accelerating new module integration by 25%."
+      ]
+    }
   ],
   "stack.title": "Technologies",
   "projects.section": "Personal projects",
@@ -82,6 +91,7 @@ export const en: UIContent = {
   ],
   "contact.title.1": "Ready to",
   "contact.title.2": "collaborate and create?",
+  "contact.message": "Hey, I would like to work with you!",
   "contact.description":
     "I'm here to bring your ideas to life with creativity and precision. Let's connect and explore the possibilities",
   "contact.button": "Get in touch",

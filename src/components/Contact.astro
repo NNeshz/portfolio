@@ -1,0 +1,31 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n";
+import { Button } from "./ui/button";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="my-28" id="contact">
+  <div class="px-8 md:px-0 max-w-4xl mx-auto">
+    <div class="h-full bg-primary rounded-3xl text-center overflow-hidden p-8">
+      <h2 class="text-5xl tracking-tighter font-normal md:text-4xl text-secondary">
+        {t["contact.title.1"]}
+        <span
+          class="md:block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+          >{t["contact.title.2"]}</span
+        >
+      </h2>
+      <p class="mt-4 text-base text-secondary/90 max-w-lg mx-auto">
+        {t["contact.description"]}
+      </p>
+      <div class="flex mt-4 items-center justify-center">
+        <Button variant="outline" className="px-8 font-semibold">
+          <a href={`https://wa.me/+522462029653?text=${t["contact.message"]}`} target="_blank">
+            {t["contact.button"]}
+          </a>
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
