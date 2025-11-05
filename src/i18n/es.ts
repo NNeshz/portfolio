@@ -16,38 +16,43 @@ export const es: UIContent = {
   "work.title": "Experiencia Laboral",
   experience: [
     {
-      company: "Las Cámaras del Dragón",
+      company: "Keando",
       position: "Desarrollador Full Stack",
-      date: "Febrero 2025 - Mayo 2025",
-      description: "Lideré el desarrollo de la API principal, optimizando la comunicación entre sistemas con Elysia.js y Supabase. Implementé arquitectura E2E y borrado lógico, reduciendo errores en peticiones/respuestas en un 35% y mejorando la eficiencia del backend en un 20%. La documentación automatizada con Swagger mejoró la claridad técnica para el equipo.",
+      date: "Marzo 2023 - Presente",
+      description:
+        "En Keando, he optimizado servicios API críticos para soluciones de movilidad, logrando una reducción de latencia del 60%. He desarrollado una arquitectura escalable con NestJS, mejorando la confiabilidad del sistema en un 45%. Además, implementé un sistema de autenticación multicapa y mejoré las métricas de rendimiento web en un 15%, lo que ha resultado en una experiencia de usuario significativamente mejorada.",
       highlights: [
-        "Optimización de rutas API: Reducción de latencia de 300ms a 120ms (60% más rápido) y documentación automatizada con Elysia Swagger. Integración de AWS S3 para gestión de archivos, mejorando tiempos de carga en un 25%.",
-        "Sistema de autenticación con BetterAuth: Reducción de vulnerabilidades en un 50% y aceleración del flujo de desarrollo en autenticación/autorización en un 40% mediante inyección contextual de datos.",
-        "Contribución en Frontend con ShadCN/TailwindCSS: Implementación de rutas privadas y layouts dinámicos, mejorando la puntuación Lighthouse en 15 puntos (SEO/UX)."
-      ]
-    },
-    {
-      company: "Sois",
-      position: "Desarrollador Full Stack",
-      date: "Septiembre 2024 - Diciembre 2024",
-      description: "Desarrollé una aplicación integral para gestión de ventas, inventario y reportes, optimizando procesos operativos. Reduje tiempos de respuesta de APIs de 450ms a 180ms (60% más rápido) e implementé autenticación segura con Supabase, eliminando accesos no autorizados en un 75%.",
-      highlights: [
-        "Sistema de punto de venta e inventario: Reducción del 40% en tiempos de gestión operativa y aumento del 30% en precisión de reportes.",
-        "APIs RESTful optimizadas: Mejor rendimiento con caché y queries optimizadas, logrando un 99.8% de uptime.",
-        "Supabase Auth: Reducción de brechas de seguridad en un 75% y aceleración de flujos de autenticación en un 50%."
-      ]
+        "Optimicé servicios API críticos para soluciones de movilidad, reduciendo la latencia en un 60% (de 300 ms a 120 ms) mediante refactorización del backend y gestión eficiente de recursos con cloud storage.",
+        "Desarrollé arquitectura escalable con NestJS implementando patrones de diseño modulares, disminuyendo fallas de sistema en un 60% y mejorando la confiabilidad operativa en un 45% para plataformas de alto tráfico.",
+        "Implementé sistema de autenticación multicapa con tokens seguros y validación OTP, acelerando el proceso de acceso en un 40% y garantizando protección de datos sensibles mediante sanitización y cifrado.",
+        "Mejoré métricas de rendimiento web en un 15% (Lighthouse) a través de optimización de rutas dinámicas, lazy loading y diseño responsive, mejorando significativamente la experiencia del usuario.",
+      ],
     },
     {
       company: "Exxpress",
       position: "Desarrollador Full Stack",
-      date: "Enero 2024 - Marzo 2024",
-      description: "Diseñé e implementé el panel de control con enfoque en UI/UX, integrando Elysia.js y Firebase. Reduje errores de usuario en un 30% y mejoré tiempos de respuesta API en un 40% (de 500ms a 300ms).",
+      date: "Junio 2021 - Febrero 2023",
+      description:
+        "Lideré la migración del backend a NestJS con Firebase, lo que resultó en un aumento del 40% en la velocidad de respuesta y una reducción del 20% en los costos operativos. También desarrollé componentes de UI accesibles y reutilizables con React y TailwindCSS, lo que estandarizó el diseño y redujo los errores en los formularios. Mi contribución activa en el roadmap técnico aceleró la integración de nuevos módulos en un 25%.",
       highlights: [
-        "ShadCN/UI: Mejora de accesibilidad (WCAG 2.1) y reducción de errores en formularios en un 30%.",
-        "Integración Elysia.js + Firebase: Optimización de solicitudes API (40% más rápidas) y reducción de costos en un 20% vs. soluciones tradicionales.",
-        "Colaboración en equipo: Análisis de código legacy, acelerando la integración de nuevos módulos en un 25%."
-      ]
-    }
+        "Migré el backend a NestJS integrado con Firebase, incrementando la velocidad de respuesta en un 40% y reduciendo costos operativos en un 20%.",
+        "Desarrollé componentes de UI accesibles y reutilizables con React y TailwindCSS, reduciendo errores en formularios y estandarizando el diseño del dashboard.",
+        "Aceleré la integración de nuevos módulos en un 25%, analizando código legacy y contribuyendo activamente en el roadmap técnico junto al Project Manager.",
+        "Mantuve estándares de código limpio con testing básico y CI/CD utilizando Vercel, PostgreSQL y TypeScript.",
+      ],
+    },
+    {
+      company: "Salón de Belleza Sois",
+      position: "Desarrollador Full Stack (Freelance)",
+      date: "Enero 2020 - Mayo 2021",
+      description:
+        "Como desarrollador freelance, diseñé y construí un sistema integral de punto de venta (POS), inventario y CMS para un salón de belleza. Este sistema optimizó las operaciones, redujo los tiempos de gestión en un 40% y mejoró la precisión de los informes en un 35%. La implementación de una API RESTful eficiente y un sistema de autenticación seguro con Auth0 fue clave para el éxito del proyecto.",
+      highlights: [
+        "Diseñé y desarrollé sistema completo de punto de venta, inventario y CMS, reduciendo tiempos operativos en un 40% y aumentando precisión de reportes en un 35%.",
+        "Optimicé API RESTful con estrategias de caché y consultas indexadas, logrando tiempos de respuesta de 200-300 ms bajo carga concurrente.",
+        "Implementé sistema de autenticación seguro con Auth0, disminuyendo brechas de seguridad en un 75% con gestión granular de roles y permisos.",
+      ],
+    },
   ],
   "stack.title": "Tecnologías",
   "projects.section": "Proyectos personales",
