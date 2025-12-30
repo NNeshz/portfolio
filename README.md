@@ -1,68 +1,46 @@
-# 🌑 Portfolio Minimalista | [nneshz](https://nneshz.vercel.app)  
+# Astro Starter Kit: Basics
 
-**Portfolio técnico open-source** con diseño blanco/negro, i18n y componentes accesibles. Desarrollado con Astro 5, React 19 y shadcn/ui.  
+```sh
+bun create astro@latest -- --template basics
+```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnneshz%2Fportfolio)  
-![Captura desde 2025-05-27 17-34-44 (Editado)](https://github.com/user-attachments/assets/2174380c-c964-45b9-a64d-631d106a50f7)
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
+## 🚀 Project Structure
 
-## ✨ Características  
-- **🚀 Astro 5 + React 19**: Rendimiento estático con islands architecture.  
-- **🎨 shadcn/ui**: Componentes accesibles (Slot, CVA, tailwind-merge).  
-- **📡 SEO Avanzado**: Optimizado con @astrolib/seo.  
-- **🔠 Tipografía moderna**: Geist Sans como fuente principal.  
-- **✨ Micro-interacciones**: Animaciones con tw-animate-css.  
+Inside of your Astro project, you'll see the following folders and files:
 
-## 🛠 Stack Técnico  
-```bash
-Astro 5.8 | React 19 | shadcn/ui | Tailwind CSS 4 | Geist Sans | Lucide Icons
-```  
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   └── astro.svg
+│   ├── components
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   └── pages
+│       └── index.astro
+└── package.json
+```
 
-## 📦 Dependencias Clave  
-```json
-"dependencies": {
-  "@astrojs/react": "^4.3.0",
-  "@astrolib/seo": "^1.0.0-beta.8",
-  "@fontsource/geist-sans": "^5.2.5",
-  "@radix-ui/react-slot": "^1.2.3",
-  "class-variance-authority": "^0.7.1",
-  "lucide-react": "^0.511.0",
-  "tailwind-merge": "^3.3.0"
-}
-```  
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-## 🚀 Instalación  
-1. Clona el repositorio:  
-```bash  
-git clone https://github.com/nneshz/portfolio.git  
-```  
-2. Instala dependencias:  
-```bash  
-bun install  
-```  
-3. Ejecuta en desarrollo:  
-```bash  
-bun run dev  
-```  
+## 🧞 Commands
 
-## 🎨 Personalización  
-### Añade tu contenido  
-- **Experiencia laboral**: Edita `src/content/experience.md`  
-- **Proyectos**: Modifica `src/content/projects.json`  
-- **SEO**: Configura `src/astro.config.mjs`  
+All commands are run from the root of the project, from a terminal:
 
-### Cambia estilos  
-1. Colores B&N en `src/styles/global.css`  
-2. Animaciones en `tailwind.config.js` usando `tw-animate-css`  
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `bun install`             | Installs dependencies                            |
+| `bun dev`             | Starts local dev server at `localhost:4321`      |
+| `bun build`           | Build your production site to `./dist/`          |
+| `bun preview`         | Preview your build locally, before deploying     |
+| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `bun astro -- --help` | Get help using the Astro CLI                     |
 
-## 📜 Licencia  
-MIT License. **¡Usa y adapta libremente!**  
+## 👀 Want to learn more?
 
----  
-**🔗 Demo**: [nneshz.vercel.app](https://nneshz.vercel.app)  
-**🐞 Issues/Contribuciones**: ¡Bienvenidas!  
-
----  
-[![Star on GitHub](https://img.shields.io/github/stars/nneshz/portfolio?style=social)](https://github.com/nneshz/portfolio)  
-
----  
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
