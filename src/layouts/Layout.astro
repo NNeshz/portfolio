@@ -1,11 +1,25 @@
+---
+import '../styles/global.css';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Neftali Hernández | Full Stack Developer</title>
+		<script is:inline>
+			(function() {
+				const theme = localStorage.getItem('theme');
+				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				const shouldBeDark = theme === 'dark' || (!theme && prefersDark);
+				if (shouldBeDark) {
+					document.documentElement.classList.add('dark');
+				}
+			})();
+		</script>
 	</head>
 	<body>
 		<slot />

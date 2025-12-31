@@ -1,0 +1,37 @@
+---
+import { ProjectCard } from "./ProjectCard.tsx";
+---
+
+<section class="border-b">
+  <div class="max-w-4xl mx-auto px-4 py-12 border-l border-r space-y-4">
+    <h2 class="text-muted-foreground mb-8">Proyectos</h2>
+    <div class="grid grid-cols-1 gap-4">
+      <ProjectCard
+        client:load
+        title="Meetzeen"
+        resume="Meetzeen es una plataforma que busca organizar y automatizar las citas de diferentes usuarios con diferentes servicios. La idea es ahorrar tiempo y dar claridad acerca del negocio, sus ingresos y clientes."
+        date="Nov 2025 - Presente"
+        description={[
+          "Desarrollo de aplicaciones web utilizando React, Next.js, Tailwind CSS, TypeScript y MongoDB.",
+          "Implementación de autenticación con JWT y OAuth.",
+          "Desarrollo de API RESTful con Node.js y Express.",
+        ]}
+        tags={["React", "Next.js", "Tailwind CSS", "TypeScript", "MongoDB"]}
+        demoUrl="https://meetzeen.com"
+      />
+      <ProjectCard
+        client:load
+        title="Octo"
+        resume="Octo fue un proyecto presentado para una hackathon, el objetivo de esta aplicación es que con IA se pueda revisar el código de cada PR de modo que se pueda avisar sobre algun error o alguna mejora que podría implementarse."
+        date="Jul 2023 - Nov 2025"
+        description={[
+          "Desarrollo de aplicaciones web utilizando React, Next.js, Tailwind CSS, TypeScript y MongoDB.",
+          "Implementación de autenticación con JWT y OAuth.",
+          "Desarrollo de API RESTful con Node.js y Express.",
+        ]}
+        tags={["React", "Next.js", "Tailwind CSS", "TypeScript", "MongoDB"]}
+        githubUrl="https://github.com/JorgeRojas827/octo"
+      />
+    </div>
+  </div>
+</section>

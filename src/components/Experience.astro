@@ -1,0 +1,65 @@
+---
+import { ExperienceItem } from "./ExperienceItem";
+---
+
+<section class="border-b">
+  <div class="max-w-4xl mx-auto px-4 py-12 border-l border-r space-y-4">
+    <h2 class="text-muted-foreground mb-6">Experiencia</h2>
+    <div class="relative border-l border-muted ml-3 space-y-12 pb-4">
+      <div class="relative pl-8">
+        <div
+          class="absolute -left-[5px] top-7 h-2.5 w-2.5 rounded-full bg-muted-foreground ring-4 ring-background"
+        >
+        </div>
+        <ExperienceItem
+          client:visible
+          title="Full Stack Developer"
+          company="Keando"
+          date="Jul 2023 - Nov 2025"
+          description={[
+            "Desarrollo de aplicaciones web utilizando React, Next.js, Tailwind CSS, TypeScript y MongoDB.",
+            "Implementación de autenticación con JWT y OAuth.",
+            "Desarrollo de API RESTful con Node.js y Express.",
+          ]}
+          tags={["React", "Next.js", "Tailwind CSS", "TypeScript", "MongoDB"]}
+        />
+      </div>
+      <div class="relative pl-8">
+        <div
+          class="absolute -left-[5px] top-7 h-2.5 w-2.5 rounded-full bg-muted-foreground ring-4 ring-background"
+        >
+        </div>
+        <ExperienceItem
+          client:visible
+          title="Full Stack Developer"
+          company="CargaYa"
+          date="Nov 2022 - Jul 2023"
+          description={[
+            "Desarrollo de aplicaciones web utilizando React, Next.js, Tailwind CSS, TypeScript y MongoDB.",
+            "Implementación de autenticación con JWT y OAuth.",
+            "Desarrollo de API RESTful con Node.js y Express.",
+          ]}
+          tags={["React", "Next.js", "Tailwind CSS", "TypeScript", "MongoDB"]}
+        />
+      </div>
+      <div class="relative pl-8">
+        <div
+          class="absolute -left-[5px] top-7 h-2.5 w-2.5 rounded-full bg-muted-foreground ring-4 ring-background"
+        >
+        </div>
+        <ExperienceItem
+          client:visible
+          title="Full Stack Developer"
+          company="Terna Labs"
+          date="Feb 2020 - Oct 2022"
+          description={[
+            "Desarrollo de aplicaciones web utilizando React, Next.js, Tailwind CSS, TypeScript y MongoDB.",
+            "Implementación de autenticación con JWT y OAuth.",
+            "Desarrollo de API RESTful con Node.js y Express.",
+          ]}
+          tags={["React", "Next.js", "Tailwind CSS", "TypeScript", "MongoDB"]}
+        />
+      </div>
+    </div>
+  </div>
+</section>

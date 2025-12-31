@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import nneshz from "../assets/img/nneshz.png";
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+---
+
+<section>
+  <div
+    class="max-w-4xl mx-auto p-4 border-l border-r border-b flex items-center gap-6 relative"
+  >
+    <Image
+      src={nneshz}
+      alt="NNeshz Profile Picture"
+      width={100}
+      height={100}
+      decoding="async"
+      loading="lazy"
+    />
+    <div>
+      <h1 class="text-3xl font-bold">Neftali Hernández</h1>
+      <h2 class="text-xl text-muted-foreground">Full Stack Developer</h2>
+    </div>
+    <div class="absolute top-4 right-4">
+      <ThemeSwitcher />
+    </div>
+  </div>
+</section>
