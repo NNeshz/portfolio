@@ -1,0 +1,49 @@
+---
+import { Temporal } from "temporal-polyfill";
+
+const now = Temporal.Now.plainDateISO();
+const day = now.day;
+const month = now.month;
+const year = now.year;
+
+let dateDisplay = "";
+
+if (month === 12 && day === 31) {
+  dateDisplay = "¡Feliz año nuevo! 🎊";
+} else if (month === 1 && day === 1) {
+  dateDisplay = "¡Feliz Año Nuevo! 🎆";
+} else if (month === 2 && day === 14) {
+  dateDisplay = "¡Feliz Día de San Valentín! ❤️";
+} else if (month === 9 && day === 16) {
+  dateDisplay = "¡Viva México! 🇲🇽";
+} else if (month === 12 && day === 25) {
+  dateDisplay = "¡Feliz Navidad! 🎄";
+} else {
+  const months = [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre",
+  ];
+  dateDisplay = `${day} de ${months[month - 1]}, ${year}`;
+}
+---
+
+<section class="border-b">
+  <div
+    class="max-w-4xl mx-auto px-4 py-12 border-l border-r flex justify-between items-center text-sm text-muted-foreground"
+  >
+    <div>@NNeshz</div>
+    <div>
+      {dateDisplay}
+    </div>
+  </div>
+</section>
