@@ -36,11 +36,13 @@ export function ExperienceItem({
         </div>
         
         <div className="flex items-center gap-2">
-            {/* Logo placeholder or image */}
-            <div className="size-6 rounded bg-zinc-800 flex items-center justify-center text-[10px] text-white font-bold">
-                {/* Simple generic logo logic if no image provided, assuming Dukaan has a blue logo based on image 1 (blue icon) */}
-                D
-            </div>
+            {logo ? (
+              <img src={logo} alt={company} className="size-6 rounded object-contain" />
+            ) : (
+              <div className="size-6 rounded bg-zinc-800 flex items-center justify-center text-[10px] text-white font-bold">
+                  {company.charAt(0).toUpperCase()}
+              </div>
+            )}
             <span className="font-medium text-muted-foreground">{company}</span>
         </div>
       </div>
@@ -73,4 +75,3 @@ export function ExperienceItem({
     </div>
   )
 }
-

@@ -4,75 +4,35 @@ import { Image } from "astro:assets";
 // Icons
 import AstroLight from "../assets/icons/Astro_light.svg";
 import AstroDark from "../assets/icons/Astro_dark.svg";
-import BetterAuth from "../assets/icons/better-auth.svg";
 import Docker from "../assets/icons/docker.svg";
-import DrizzleLight from "../assets/icons/DrizzleORM_light.svg";
-import DrizzleDark from "../assets/icons/DrizzleORM_dark.svg";
-import Elysia from "../assets/icons/elysiajs.svg";
-import Fly from "../assets/icons/fly.svg";
 import GithubLight from "../assets/icons/GitHub_light.svg";
 import GithubDark from "../assets/icons/GitHub_dark.svg";
 import GoLight from "../assets/icons/Go_light.svg";
 import GoDark from "../assets/icons/Go_dark.svg";
 import GoogleCloud from "../assets/icons/google-cloud.svg";
 import Javascript from "../assets/icons/javascript.svg";
-import Jwt from "../assets/icons/jwt.svg";
 import MongoDBLight from "../assets/icons/MongoDB_light.svg";
 import MongoDBDark from "../assets/icons/MongoDB_dark.svg";
 import Nestjs from "../assets/icons/nestjs.svg";
 import Nextjs from "../assets/icons/nextjs.svg";
 import Nodejs from "../assets/icons/nodejs.svg";
 import Postgresql from "../assets/icons/postgresql.svg";
-import Prisma from "../assets/icons/prisma.svg";
 import ReactIcon from "../assets/icons/react.svg";
-import ReactQuery from "../assets/icons/reactquery.svg";
-import Redux from "../assets/icons/redux.svg";
-import SocketioLight from "../assets/icons/Socket.IO_light.svg";
-import SocketioDark from "../assets/icons/Socket.IO_dark.svg";
-import Stripe from "../assets/icons/stripe.svg";
-import Supabase from "../assets/icons/supabase.svg";
-import Tailwind from "../assets/icons/tailwindcss.svg";
-import Tanstack from "../assets/icons/tanstack.svg";
-import Turborepo from "../assets/icons/turborepo.svg";
 import Typescript from "../assets/icons/typescript.svg";
-import UiLight from "../assets/icons/ui_light.svg";
-import UiDark from "../assets/icons/ui_dark.svg";
-import VercelLight from "../assets/icons/Vercel_light.svg";
-import VercelDark from "../assets/icons/Vercel_dark.svg";
-import Vite from "../assets/icons/vitejs.svg";
-import Zod from "../assets/icons/zod.svg";
 
 const skills = [
   { name: "JavaScript", icon: Javascript },
   { name: "TypeScript", icon: Typescript },
   { name: "React", icon: ReactIcon },
   { name: "Next.js", icon: Nextjs },
-  { name: "Astro", iconLight: AstroLight, iconDark: AstroDark },
+  { name: "Astro", iconLight: AstroDark, iconDark: AstroLight },
   { name: "Node.js", icon: Nodejs },
   { name: "Go", iconLight: GoLight, iconDark: GoDark },
   { name: "NestJS", icon: Nestjs },
-  { name: "ElysiaJS", icon: Elysia },
   { name: "PostgreSQL", icon: Postgresql },
   { name: "MongoDB", iconLight: MongoDBLight, iconDark: MongoDBDark },
-  { name: "Drizzle", iconLight: DrizzleLight, iconDark: DrizzleDark },
-  { name: "Prisma", icon: Prisma },
-  { name: "Supabase", icon: Supabase },
-  { name: "Tailwind CSS", icon: Tailwind },
-  { name: "Shadcn UI", iconLight: UiLight, iconDark: UiDark },
-  { name: "TanStack", icon: Tanstack },
-  { name: "React Query", icon: ReactQuery },
-  { name: "Redux", icon: Redux },
-  { name: "Zod", icon: Zod },
-  { name: "Better Auth", icon: BetterAuth },
-  { name: "JWT", icon: Jwt },
-  { name: "Socket.io", iconLight: SocketioLight, iconDark: SocketioDark },
   { name: "Docker", icon: Docker },
-  { name: "TurboRepo", icon: Turborepo },
-  { name: "Vite", icon: Vite },
-  { name: "Vercel", iconLight: VercelLight, iconDark: VercelDark },
-  { name: "Fly.io", icon: Fly },
   { name: "Google Cloud", icon: GoogleCloud },
-  { name: "Stripe", icon: Stripe },
   { name: "GitHub", iconLight: GithubLight, iconDark: GithubDark },
 ];
 ---
@@ -89,18 +49,18 @@ const skills = [
         skills.map((skill) => (
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border bg-card/50 hover:bg-card text-card-foreground shadow-sm hover:shadow-md transition-all duration-300">
             {skill.icon ? (
-              <Image src={skill.icon} alt={skill.name} class="size-4" />
+              <Image src={skill.icon} alt={skill.name} class="h-4 w-auto object-contain" />
             ) : (
               <>
                 <Image
                   src={skill.iconLight}
                   alt={skill.name}
-                  class="size-4 block dark:hidden"
+                  class="h-4 w-auto object-contain block dark:hidden"
                 />
                 <Image
                   src={skill.iconDark}
                   alt={skill.name}
-                  class="size-4 hidden dark:block"
+                  class="h-4 w-auto object-contain hidden dark:block"
                 />
               </>
             )}
