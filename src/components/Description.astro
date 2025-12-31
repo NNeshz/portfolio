@@ -4,6 +4,7 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandX,
+  IconMail,
 } from "@tabler/icons-react";
 import Contributions from "./Contributions.astro";
 ---
@@ -26,16 +27,28 @@ import Contributions from "./Contributions.astro";
     <p class="text-muted-foreground">Puedes contactarme aquí:</p>
     <div class="flex gap-2">
       <Button variant="outline">
-        <IconBrandGithub className="inline w-5 h-5 mr-1" />
-        GitHub
+        <a href="https://github.com/nneshz" target="_blank">
+          <IconBrandGithub className="inline w-5 h-5 mr-1" />
+          GitHub
+        </a>
       </Button>
       <Button variant="outline">
-        <IconBrandLinkedin className="inline w-5 h-5 mr-1" />
-        LinkedIn
+        <a href="https://www.linkedin.com/in/nneshz/" target="_blank">
+          <IconBrandLinkedin className="inline w-5 h-5 mr-1" />
+          LinkedIn
+        </a>
       </Button>
       <Button variant="outline">
-        <IconBrandX className="inline w-5 h-5 mr-1" />
-        Twitter
+        <a href="https://x.com/nneshz" target="_blank">
+          <IconBrandX className="inline w-5 h-5 mr-1" />
+          Twitter
+        </a>
+      </Button>
+      <Button variant="outline">
+        <a href="mailto:nneftahdez@gmail.com" target="_blank" rel="noopener noreferrer">
+          <IconMail className="inline w-5 h-5 mr-1" />
+          Correo
+        </a>
       </Button>
     </div>
 
