@@ -46,7 +46,7 @@ const skills = [
     <div class="flex flex-wrap gap-3">
       {
         skills.map((skill) => (
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border bg-card/50 hover:bg-card text-card-foreground shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 border border-border bg-card/50 hover:bg-card text-card-foreground shadow-sm hover:shadow-md transition-all duration-300">
             {skill.icon ? (
               <Image src={skill.icon} alt={skill.name} class="h-4 w-auto object-contain" />
             ) : (
