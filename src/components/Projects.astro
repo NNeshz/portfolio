@@ -8,8 +8,22 @@ import { ProjectCard } from "./ProjectCard.tsx";
     <div class="grid grid-cols-1 gap-4">
       <ProjectCard
         client:load
+        title="Reentwise"
+        resume="Es una plataforma creada para ayudar a los arrendadores a gestionar sus propiedades de manera eficiente, ahorrar tiempo por medio de mensajes de WhatsApp automatizados y control de ingresos y egresos."
+        date="Febrero 2026 - Presente"
+        description={[
+          "Implementacion de API de WhatsApp.",
+          "Integración de suscripciones mediante Polar.",
+          "Desarrollo de API RESTful con Cron Jobs.",
+        ]}
+        tags={["Next.js", "ShadCN", "TypeScript", "ElysiaJS", "Polar"]}
+        githubUrl="https://github.com/nneshz/reentwise"
+        demoUrl="https://reentwise.com"
+      />
+      <ProjectCard
+        client:load
         title="Meetzeen"
-        resume="Meetzeen es una plataforma que busca organizar y automatizar las citas de diferentes usuarios con diferentes servicios. La idea es ahorrar tiempo y dar claridad acerca del negocio, sus ingresos y clientes."
+        resume="Meetzeen es una plataforma que busca organizar y automatizar las citas de diferentes usuarios con diferentes servicios. La idea es ahorrar tiempo y dar claridad acerca del negocio, con sus horarios y todo."
         date="Nov 2025 - Presente"
         description={[
           "Desarrollo de dashboard administrativo con +15 métricas operacionales clave, y reportes generados con IA.",
@@ -17,20 +31,7 @@ import { ProjectCard } from "./ProjectCard.tsx";
           "Diseño y desarrollo de la base de datos con Supabase para almacenamiento de datos e imagenes.",          
         ]}
         tags={["Next.js", "ShadCN", "TypeScript", "Supabase", "ElysiaJS", "S3 Bucket"]}
-        demoUrl="https://meetzeen.com"
-      />
-      <ProjectCard
-        client:load
-        title="Octo"
-        resume="Octo fue un proyecto presentado para una hackathon, el objetivo de esta aplicación es que con IA se pueda revisar el código de cada PR de modo que se pueda avisar sobre algun error o alguna mejora que podría implementarse."
-        date="Jul 2023 - Nov 2025"
-        description={[
-          "Implementacion de registro mediante OAuth de GitHub.",
-          "Extracción de commits y PRs de GitHub.",
-          "Desarrollo de API RESTful con NestJS.",
-        ]}
-        tags={["Next.js", "ShadCN", "TypeScript", "NestJS", "AI SDK"]}
-        githubUrl="https://github.com/JorgeRojas827/octo"
+        githubUrl="https://github.com/nneshz/meetzeen"
       />
     </div>
   </div>
