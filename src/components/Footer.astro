@@ -1,34 +1,9 @@
 ---
-import { Temporal } from "temporal-polyfill";
 import type { Lang } from "../i18n/translations";
 import { translations } from "../i18n/translations";
 
 const lang = (Astro.currentLocale as Lang) ?? 'es';
 const t = translations[lang].footer;
-
-const now = Temporal.Now.plainDateISO();
-const day = now.day;
-const month = now.month;
-const year = now.year;
-
-let dateDisplay = "";
-
-if (month === 12 && day === 31) {
-  dateDisplay = t.specialDates.newYearEve;
-} else if (month === 1 && day === 1) {
-  dateDisplay = t.specialDates.newYear;
-} else if (month === 2 && day === 14) {
-  dateDisplay = t.specialDates.valentines;
-} else if (month === 9 && day === 16) {
-  dateDisplay = t.specialDates.mexico;
-} else if (month === 12 && day === 25) {
-  dateDisplay = t.specialDates.christmas;
-} else {
-  const monthName = t.months[month - 1];
-  dateDisplay = lang === 'en'
-    ? `${monthName} ${day}, ${year}`
-    : `${day} de ${monthName}, ${year}`;
-}
 ---
 
 <section class="border-b">
@@ -36,8 +11,35 @@ if (month === 12 && day === 31) {
     class="max-w-4xl mx-auto px-4 py-12 border-l border-r flex justify-between items-center text-sm text-muted-foreground"
   >
     <div>@NNeshz</div>
-    <div>
-      {dateDisplay}
-    </div>
+    <div id="footer-date"></div>
   </div>
 </section>
+
+<script define:vars={{ t, lang }}>
+  const now = new Date();
+  const day = now.getDate();
+  const month = now.getMonth() + 1;
+  const year = now.getFullYear();
+
+  let dateDisplay = "";
+
+  if (month === 12 && day === 31) {
+    dateDisplay = t.specialDates.newYearEve;
+  } else if (month === 1 && day === 1) {
+    dateDisplay = t.specialDates.newYear;
+  } else if (month === 2 && day === 14) {
+    dateDisplay = t.specialDates.valentines;
+  } else if (month === 9 && day === 16) {
+    dateDisplay = t.specialDates.mexico;
+  } else if (month === 12 && day === 25) {
+    dateDisplay = t.specialDates.christmas;
+  } else {
+    const monthName = t.months[month - 1];
+    dateDisplay = lang === "en"
+      ? `${monthName} ${day}, ${year}`
+      : `${day} de ${monthName}, ${year}`;
+  }
+
+  const el = document.getElementById("footer-date");
+  if (el) el.textContent = dateDisplay;
+</script>
