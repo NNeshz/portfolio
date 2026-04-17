@@ -7,6 +7,7 @@ interface ExperienceItemProps {
   description?: string[];
   tags?: string[];
   logo?: string;
+  seeMoreLabel?: string;
 }
 
 export function ExperienceItem({ 
@@ -20,7 +21,8 @@ export function ExperienceItem({
     "Used Nginx to serve generated static project files."
   ],
   tags = ["React", "Express.js", "MongoDB", "JWT", "OAuth", "Nginx", "Monaco Editor"],
-  logo
+  logo,
+  seeMoreLabel = "Ver más",
 }: ExperienceItemProps) {
   return (
     <div className="text-foreground py-4 transition-colors">
@@ -68,7 +70,7 @@ export function ExperienceItem({
           </AccordionContent>
           
           <AccordionTrigger className="justify-start gap-2 py-2 text-sm text-muted-foreground hover:text-foreground hover:no-underline data-[state=open]:text-foreground">
-            Ver más
+            {seeMoreLabel}
           </AccordionTrigger>
         </AccordionItem>
       </Accordion>

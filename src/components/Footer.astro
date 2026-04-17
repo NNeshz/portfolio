@@ -1,5 +1,10 @@
 ---
 import { Temporal } from "temporal-polyfill";
+import type { Lang } from "../i18n/translations";
+import { translations } from "../i18n/translations";
+
+const lang = (Astro.currentLocale as Lang) ?? 'es';
+const t = translations[lang].footer;
 
 const now = Temporal.Now.plainDateISO();
 const day = now.day;
@@ -9,31 +14,20 @@ const year = now.year;
 let dateDisplay = "";
 
 if (month === 12 && day === 31) {
-  dateDisplay = "¡Feliz año nuevo! 🎊";
+  dateDisplay = t.specialDates.newYearEve;
 } else if (month === 1 && day === 1) {
-  dateDisplay = "¡Feliz Año Nuevo! 🎆";
+  dateDisplay = t.specialDates.newYear;
 } else if (month === 2 && day === 14) {
-  dateDisplay = "¡Feliz Día de San Valentín! ❤️";
+  dateDisplay = t.specialDates.valentines;
 } else if (month === 9 && day === 16) {
-  dateDisplay = "¡Viva México! 🇲🇽";
+  dateDisplay = t.specialDates.mexico;
 } else if (month === 12 && day === 25) {
-  dateDisplay = "¡Feliz Navidad! 🎄";
+  dateDisplay = t.specialDates.christmas;
 } else {
-  const months = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
-  ];
-  dateDisplay = `${day} de ${months[month - 1]}, ${year}`;
+  const monthName = t.months[month - 1];
+  dateDisplay = lang === 'en'
+    ? `${monthName} ${day}, ${year}`
+    : `${day} de ${monthName}, ${year}`;
 }
 ---
 

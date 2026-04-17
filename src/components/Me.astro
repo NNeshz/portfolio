@@ -2,6 +2,12 @@
 import { Image } from "astro:assets";
 import nneshz from "../assets/img/nneshz.png";
 import ThemeSwitcher from "./ThemeSwitcher.astro";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import type { Lang } from "../i18n/translations";
+import { translations } from "../i18n/translations";
+
+const lang = (Astro.currentLocale as Lang) ?? 'es';
+const t = translations[lang];
 ---
 
 <section>
@@ -22,10 +28,11 @@ import ThemeSwitcher from "./ThemeSwitcher.astro";
     />
     <div class="text-center sm:text-left">
       <h1 class="text-2xl sm:text-3xl font-bold">Neftali Hernández</h1>
-      <h2 class="text-lg sm:text-xl text-muted-foreground">Full Stack Developer</h2>
+      <h2 class="text-lg sm:text-xl text-muted-foreground">{t.me.role}</h2>
     </div>
-    <div class="absolute top-2 right-2 sm:top-4 sm:right-4">
+    <div class="absolute top-2 right-2 sm:top-4 sm:right-4 flex flex-col items-center gap-1">
       <ThemeSwitcher />
+      <LanguageSwitcher />
     </div>
   </div>
 </section>

@@ -1,5 +1,10 @@
 ---
 import { Image } from "astro:assets";
+import type { Lang } from "../i18n/translations";
+import { translations } from "../i18n/translations";
+
+const lang = (Astro.currentLocale as Lang) ?? 'es';
+const t = translations[lang].skills;
 
 import AstroLight from "../assets/icons/Astro_light.svg";
 import AstroDark from "../assets/icons/Astro_dark.svg";
@@ -41,7 +46,7 @@ const skills = [
     <h2
       class="text-muted-foreground"
     >
-      Habilidades y Herramientas
+      {t.title}
     </h2>
     <div class="flex flex-wrap gap-3">
       {

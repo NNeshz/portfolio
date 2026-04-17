@@ -1,0 +1,15 @@
+---
+import type { Lang } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+const lang = (Astro.currentLocale as Lang) ?? 'es';
+const t = translations[lang].lang;
+---
+
+<a
+  href={t.switchTo}
+  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9"
+  aria-label={t.ariaLabel}
+>
+  {t.label}
+</a>

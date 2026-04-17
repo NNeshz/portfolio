@@ -1,37 +1,37 @@
 ---
 import { ProjectCard } from "./ProjectCard.tsx";
+import type { Lang } from "../i18n/translations";
+import { translations } from "../i18n/translations";
+
+const lang = (Astro.currentLocale as Lang) ?? 'es';
+const t = translations[lang].projects;
+const [reentwise, meetzeen] = t.items;
 ---
 
 <section class="border-b">
   <div class="max-w-4xl mx-auto px-4 py-12 border-l border-r space-y-4">
-    <h2 class="text-muted-foreground mb-8">Proyectos</h2>
+    <h2 class="text-muted-foreground mb-8">{t.title}</h2>
     <div class="grid grid-cols-1 gap-4">
       <ProjectCard
         client:load
-        title="Reentwise"
-        resume="Es una plataforma creada para ayudar a los arrendadores a gestionar sus propiedades de manera eficiente, ahorrar tiempo por medio de mensajes de WhatsApp automatizados y control de ingresos y egresos."
-        date="Febrero 2026 - Presente"
-        description={[
-          "Implementacion de API de WhatsApp.",
-          "Integración de suscripciones mediante Polar.",
-          "Desarrollo de API RESTful con Cron Jobs.",
-        ]}
-        tags={["Next.js", "ShadCN", "TypeScript", "ElysiaJS", "Polar"]}
-        githubUrl="https://github.com/nneshz/reentwise"
-        demoUrl="https://reentwise.com"
+        title={reentwise.title}
+        resume={reentwise.resume}
+        date={reentwise.date}
+        description={reentwise.description as string[]}
+        tags={reentwise.tags as string[]}
+        githubUrl={reentwise.githubUrl}
+        demoUrl={reentwise.demoUrl}
+        seeDetailsLabel={t.seeDetails}
       />
       <ProjectCard
         client:load
-        title="Meetzeen"
-        resume="Meetzeen es una plataforma que busca organizar y automatizar las citas de diferentes usuarios con diferentes servicios. La idea es ahorrar tiempo y dar claridad acerca del negocio, con sus horarios y todo."
-        date="Nov 2025 - Presente"
-        description={[
-          "Desarrollo de dashboard administrativo con +15 métricas operacionales clave, y reportes generados con IA.",
-          "Implementación de autenticación con Better Auth + invitaciones de usuario por medio de magic link.",
-          "Diseño y desarrollo de la base de datos con Supabase para almacenamiento de datos e imagenes.",          
-        ]}
-        tags={["Next.js", "ShadCN", "TypeScript", "Supabase", "ElysiaJS", "S3 Bucket"]}
-        githubUrl="https://github.com/nneshz/meetzeen"
+        title={meetzeen.title}
+        resume={meetzeen.resume}
+        date={meetzeen.date}
+        description={meetzeen.description as string[]}
+        tags={meetzeen.tags as string[]}
+        githubUrl={meetzeen.githubUrl}
+        seeDetailsLabel={t.seeDetails}
       />
     </div>
   </div>

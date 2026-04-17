@@ -16,6 +16,7 @@ interface ProjectCardProps {
   logo?: string;
   githubUrl?: string;
   demoUrl?: string;
+  seeDetailsLabel?: string;
 }
 
 export function ProjectCard({
@@ -40,6 +41,7 @@ export function ProjectCard({
   githubUrl,
   demoUrl,
   logo,
+  seeDetailsLabel = "Ver detalles",
 }: ProjectCardProps) {
   return (
     <div className="group border p-5 bg-card/30 hover:bg-card/50 transition-colors h-full flex flex-col">
@@ -119,7 +121,7 @@ export function ProjectCard({
             </AccordionContent>
 
             <AccordionTrigger className="justify-start gap-2 py-2 text-sm text-muted-foreground hover:text-foreground hover:no-underline data-[state=open]:text-foreground">
-              Ver detalles
+              {seeDetailsLabel}
             </AccordionTrigger>
           </AccordionItem>
         </Accordion>
