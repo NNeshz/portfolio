@@ -44,7 +44,7 @@ export function ProjectCard({
   seeDetailsLabel = "Ver detalles",
 }: ProjectCardProps) {
   return (
-    <div className="group border p-5 bg-card/30 hover:bg-card/50 transition-colors h-full flex flex-col">
+    <div className="group border p-5 bg-card/30 hover:bg-card/50 transition-colors flex flex-col">
       {/* Header Section - Always Visible */}
       <div className="flex flex-col gap-4 mb-4">
         <div className="flex justify-between items-start">
