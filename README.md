@@ -1,46 +1,36 @@
-# Astro Starter Kit: Basics
+# Portfolio — Neftali Hernández
 
-```sh
-bun create astro@latest -- --template basics
-```
+My personal portfolio: a fast, minimal site built with Astro. Showcases my
+work experience, projects, and skills, with full English/Spanish support.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Tech stack
 
-## 🚀 Project Structure
+- [Astro](https://astro.build) — static site, View Transitions for smooth navigation
+- [React](https://react.dev) islands for interactive bits
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- i18n (`es` / `en`) and a light/dark theme
 
-Inside of your Astro project, you'll see the following folders and files:
+## Development
+
+All commands run from the root of the project:
+
+| Command         | Action                                       |
+| :-------------- | :------------------------------------------- |
+| `bun install`   | Install dependencies                         |
+| `bun dev`       | Start the dev server at `localhost:4321`     |
+| `bun build`     | Build the production site to `./dist/`       |
+| `bun preview`   | Preview the production build locally         |
+
+## Project structure
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+src/
+├── assets/        # Images, brand logos, icons
+├── components/    # Astro + React components
+├── i18n/          # Translations (es / en)
+├── layouts/       # Base layout
+├── lib/           # Utilities
+├── pages/         # Routes (/ and /en)
+└── styles/        # Global styles
 ```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
