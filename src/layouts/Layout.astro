@@ -17,9 +17,11 @@ const ogLocale = lang === 'es' ? 'es_ES' : 'en_US';
 const esURL = new URL('/', Astro.site);
 const enURL = new URL('/en/', Astro.site);
 
-const personSchema = {
-  '@context': 'https://schema.org',
+const personId = new URL('#person', Astro.site).href;
+
+const person = {
   '@type': 'Person',
+  '@id': personId,
   name: 'Neftali Hernández',
   jobTitle: 'Full Stack Developer',
   url: Astro.site?.href,
@@ -34,6 +36,23 @@ const personSchema = {
     'React', 'Next.js', 'TypeScript', 'Node.js', 'Astro',
     'Tailwind CSS', 'PostgreSQL', 'MongoDB', 'LLMs', 'RAG',
   ],
+};
+
+// Projects and experiments, attributed to the person as software works so
+// search engines and AI crawlers treat them all with the same relevance.
+const works = [...t.projects.items, ...t.experiments.items].map((item) => ({
+  '@type': 'SoftwareSourceCode',
+  name: item.title,
+  description: 'resume' in item ? item.resume : item.description,
+  author: { '@id': personId },
+  keywords: item.tags,
+  ...(item.githubUrl ? { codeRepository: item.githubUrl } : {}),
+  ...('demoUrl' in item && item.demoUrl ? { url: item.demoUrl } : {}),
+}));
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [person, ...works],
 };
 ---
 
@@ -75,7 +94,7 @@ const personSchema = {
 		<meta name="twitter:creator" content="@nneshz" />
 
 		<!-- Structured data (JSON-LD) -->
-		<script type="application/ld+json" set:html={JSON.stringify(personSchema)} is:inline></script>
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} is:inline></script>
 
 		<ClientRouter />
 		<script is:inline>

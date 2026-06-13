@@ -92,6 +92,23 @@ export const translations = {
         },
       ],
     },
+    experiments: {
+      title: 'Experimentos',
+      items: [
+        {
+          title: 'PageKeys',
+          description: 'Extensión de Chrome (Manifest V3) para crear atajos de teclado en cualquier sitio web señalando el botón con el mouse, sin escribir código ni selectores CSS. Genera selectores robustos que sobreviven a cambios de diseño y soporta secuencias de teclas estilo Gmail (g i, shift+n n).',
+          tags: ['JavaScript', 'Chrome Extension', 'Manifest V3', 'chrome.storage API'],
+          githubUrl: 'https://github.com/NNeshz/pagekeys',
+        },
+        {
+          title: 'know-cli',
+          description: 'CLI en Python que indexa una carpeta de documentos y responde preguntas en lenguaje natural citando sus fuentes: un RAG de terminal. Dos modos de recuperación tras una misma interfaz —léxico (TF-IDF, sin API) y semántico (embeddings de Gemini)— y se niega a inventar cuando la respuesta no está en los documentos.',
+          tags: ['Python', 'RAG', 'Typer', 'Gemini', 'Embeddings', 'NumPy'],
+          githubUrl: 'https://github.com/NNeshz/know-cli',
+        },
+      ],
+    },
     skills: {
       title: 'Habilidades y Herramientas',
     },
@@ -206,6 +223,23 @@ export const translations = {
           ],
           tags: ['Next.js', 'ShadCN', 'TypeScript', 'Supabase', 'ElysiaJS', 'S3 Bucket'],
           githubUrl: 'https://github.com/nneshz/meetzeen',
+        },
+      ],
+    },
+    experiments: {
+      title: 'Experiments',
+      items: [
+        {
+          title: 'PageKeys',
+          description: 'Chrome extension (Manifest V3) to create keyboard shortcuts on any website by pointing at a button with the mouse — no code or CSS selectors required. It generates robust selectors that survive layout changes and supports Gmail-style key sequences (g i, shift+n n).',
+          tags: ['JavaScript', 'Chrome Extension', 'Manifest V3', 'chrome.storage API'],
+          githubUrl: 'https://github.com/NNeshz/pagekeys',
+        },
+        {
+          title: 'know-cli',
+          description: 'Python CLI that indexes a folder of documents and answers natural-language questions while citing its sources: a terminal RAG. Two retrieval modes behind a single interface —lexical (TF-IDF, no API) and semantic (Gemini embeddings)— and it refuses to make things up when the answer isn\'t in the documents.',
+          tags: ['Python', 'RAG', 'Typer', 'Gemini', 'Embeddings', 'NumPy'],
+          githubUrl: 'https://github.com/NNeshz/know-cli',
         },
       ],
     },

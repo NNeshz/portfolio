@@ -1,0 +1,29 @@
+---
+import { ExperimentCard } from "./ExperimentCard.tsx";
+import type { Lang } from "../i18n/translations";
+import { translations } from "../i18n/translations";
+
+const lang = (Astro.currentLocale as Lang) ?? 'es';
+const t = translations[lang].experiments;
+const [pagekeys, knowcli] = t.items;
+---
+
+<section class="border-b">
+  <div class="max-w-4xl mx-auto px-4 py-12 border-l border-r space-y-4">
+    <h2 class="text-muted-foreground mb-8">{t.title}</h2>
+    <div class="grid grid-cols-1 gap-4">
+      <ExperimentCard
+        title={knowcli.title}
+        description={knowcli.description}
+        tags={knowcli.tags as string[]}
+        githubUrl={knowcli.githubUrl}
+      />
+      <ExperimentCard
+        title={pagekeys.title}
+        description={pagekeys.description}
+        tags={pagekeys.tags as string[]}
+        githubUrl={pagekeys.githubUrl}
+      />
+    </div>
+  </div>
+</section>
