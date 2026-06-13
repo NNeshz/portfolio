@@ -39,50 +39,21 @@ import { Button } from "./ui/button";
   </svg>
 </button>
 
-<script is:inline>
-  (function () {
+<script>
+  function toggleTheme() {
+    const isDark = document.documentElement.classList.contains("dark");
+    const newTheme = isDark ? "light" : "dark";
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+  }
+
+  function setupThemeToggle() {
     const themeToggle = document.getElementById("theme-toggle");
+    themeToggle?.addEventListener("click", toggleTheme);
+  }
 
-    function getTheme() {
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) {
-        return savedTheme;
-      }
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-    }
-
-    function applyTheme(theme) {
-      const root = document.documentElement;
-      if (theme === "dark") {
-        root.classList.add("dark");
-      } else {
-        root.classList.remove("dark");
-      }
-    }
-
-    function initTheme() {
-      const theme = getTheme();
-      applyTheme(theme);
-    }
-
-    function toggleTheme() {
-      const currentTheme = document.documentElement.classList.contains("dark")
-        ? "dark"
-        : "light";
-      const newTheme = currentTheme === "light" ? "dark" : "light";
-      localStorage.setItem("theme", newTheme);
-      applyTheme(newTheme);
-    }
-
-    // Inicializar tema al cargar
-    initTheme();
-
-    // Agregar event listener
-    if (themeToggle) {
-      themeToggle.addEventListener("click", toggleTheme);
-    }
-  })();
+  // Runs on the initial load and after every View Transition navigation,
+  // re-attaching the handler to the freshly swapped button.
+  document.addEventListener("astro:page-load", setupThemeToggle);
 </script>
 

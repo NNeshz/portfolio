@@ -24,17 +24,16 @@ export const translations = {
     },
     experience: {
       title: 'Experiencia',
-      seeMore: 'Ver más',
       jobs: [
         {
           title: 'Full Stack Developer',
           company: 'Keando',
           date: 'Jul 2023 - Nov 2025',
           description: [
-            'Diseñé e implementé agentes conversacionales con LLMs (GPT-4, Claude) para más de 10 clientes, reduciendo tiempos de atención en un 65% e incrementando la satisfacción del cliente en un 40%.',
-            'Entregué más de 15 aplicaciones web a medida para sectores como retail, salud y logística, con un índice de entrega a tiempo del 95% y satisfacción del cliente superior al 90%.',
-            'Administré bases de datos con más de 5,000 usuarios activos e implementé pipelines de automatización que eliminaron el 40% de los procesos manuales recurrentes.',
-            'Lideré optimizaciones de rendimiento que redujeron los tiempos de carga en hasta un 50%, aplicando lazy loading, code splitting y optimización de assets.',
+            'Diseñé e implementé agentes conversacionales con LLMs (GPT-4, Claude) y RAG sobre bases de conocimiento para más de 10 clientes, reduciendo el tiempo medio de primera respuesta en un 65% y automatizando la resolución de consultas frecuentes sin intervención humana.',
+            'Entregué más de 15 aplicaciones web a medida para retail, salud y logística, cumpliendo los plazos pactados en el 95% de las entregas.',
+            'Operé en producción bases de datos con más de 5,000 usuarios activos e implementé pipelines de automatización (ETL/cron) que eliminaron tareas manuales recurrentes del equipo.',
+            'Optimicé el rendimiento del frontend (lazy loading, code splitting, optimización de assets), mejorando el LCP en un 50%.',
           ],
         },
         {
@@ -43,7 +42,7 @@ export const translations = {
           date: 'Nov 2022 - Jul 2023',
           description: [
             'Desarrollé herramientas internas para una plataforma fintech del sector transporte en Colombia, gestionando operaciones diarias de más de 200 transportadores activos.',
-            'Implementé un sistema integral de pagos digitales que aumentó la eficiencia operacional en un 45%, con soporte para PSE, Bancolombia y billeteras virtuales.',
+            'Implementé el sistema de pagos digitales con soporte para PSE, Bancolombia y billeteras virtuales, automatizando la conciliación de pagos que antes era manual.',
             'Integré pasarelas de pago locales logrando un 99.5% de tasa de éxito en transacciones, sin incidentes críticos durante todo el período de operación.',
             'Construí dashboards con más de 10 métricas clave e informes generados con IA, reduciendo el tiempo de reporte de 2 horas a 5 minutos.',
           ],
@@ -54,9 +53,9 @@ export const translations = {
           date: 'Feb 2020 - Oct 2022',
           description: [
             'Diseñé y desarrollé múltiples tiendas de e-commerce desde cero con tasas de conversión promedio del 2.8%, incluyendo carrito, checkout optimizado y gestión de productos.',
-            'Creé landing pages orientadas a conversión que incrementaron la captación de leads cualificados en hasta un 35% para campañas de marketing digital de diversas marcas.',
-            'Desarrollé un sistema de punto de venta (POS) completo que mejoró la velocidad de procesamiento en un 60% y redujo errores de inventario en un 75%.',
-            'Procesé más de $50,000 MXN en transacciones con Stripe manteniendo un índice de éxito del 98% en todos los proyectos entregados.',
+            'Construí landing pages para campañas de marketing; en pruebas A/B, las versiones optimizadas elevaron la conversión visitante→lead hasta un 35%.',
+            'Desarrollé un sistema de punto de venta (POS) completo con control de inventario que redujo las discrepancias de stock en un 75%.',
+            'Integré Stripe en los proyectos de e-commerce, manteniendo una tasa de éxito en transacciones del 98%.',
           ],
         },
       ],
@@ -141,17 +140,16 @@ export const translations = {
     },
     experience: {
       title: 'Experience',
-      seeMore: 'See more',
       jobs: [
         {
           title: 'Full Stack Developer',
           company: 'Keando',
           date: 'Jul 2023 - Nov 2025',
           description: [
-            'Designed and implemented LLM-powered conversational agents (GPT-4, Claude) for 10+ clients, reducing response times by 65% and improving customer satisfaction by 40%.',
-            'Delivered 15+ custom web applications across retail, healthcare, and logistics sectors, maintaining a 95% on-time delivery rate with 90%+ client satisfaction.',
-            'Managed databases with 5,000+ active users and built automation pipelines that eliminated 40% of recurring manual processes.',
-            'Led performance optimization initiatives reducing load times by up to 50% through lazy loading, code splitting, and asset optimization.',
+            'Designed and implemented LLM-powered conversational agents (GPT-4, Claude) with RAG over knowledge bases for 10+ clients, reducing average first-response time by 65% and automating the resolution of common queries without human intervention.',
+            'Delivered 15+ custom web applications across retail, healthcare, and logistics, meeting agreed deadlines on 95% of deliveries.',
+            'Operated production databases with 5,000+ active users and built automation pipelines (ETL/cron) that eliminated the team\'s recurring manual tasks.',
+            'Optimized frontend performance (lazy loading, code splitting, asset optimization), improving LCP by 50%.',
           ],
         },
         {
@@ -160,7 +158,7 @@ export const translations = {
           date: 'Nov 2022 - Jul 2023',
           description: [
             'Built internal tooling for a fintech platform serving the cargo transport sector in Colombia, managing daily operations for 200+ active transporters.',
-            'Implemented a comprehensive digital payment system that boosted operational efficiency by 45%, supporting PSE, Bancolombia, and digital wallets.',
+            'Implemented the digital payment system with support for PSE, Bancolombia, and digital wallets, automating payment reconciliation that was previously manual.',
             'Integrated local payment gateways achieving a 99.5% transaction success rate with zero critical incidents throughout the entire operation period.',
             'Built dashboards with 10+ key operational metrics and AI-generated reports, cutting report generation time from 2 hours down to 5 minutes.',
           ],
@@ -171,9 +169,9 @@ export const translations = {
           date: 'Feb 2020 - Oct 2022',
           description: [
             'Designed and built multiple e-commerce stores from scratch with an average 2.8% conversion rate, including optimized cart, checkout, and product management flows.',
-            'Created conversion-focused landing pages that increased qualified lead generation by up to 35% for digital marketing campaigns across various brands.',
-            'Built a full-featured point-of-sale (POS) system that improved processing speed by 60% and reduced inventory errors by 75%.',
-            'Processed $50,000+ MXN in Stripe transactions maintaining a 98% success rate across all delivered projects.',
+            'Built landing pages for marketing campaigns; in A/B tests, optimized versions lifted visitor-to-lead conversion by up to 35%.',
+            'Built a full-featured point-of-sale (POS) system with inventory control that reduced stock discrepancies by 75%.',
+            'Integrated Stripe across e-commerce projects, maintaining a 98% transaction success rate.',
           ],
         },
       ],

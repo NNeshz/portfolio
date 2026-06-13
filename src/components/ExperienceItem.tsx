@@ -1,5 +1,3 @@
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "./ui/accordion"
-
 interface ExperienceItemProps {
   title?: string;
   company?: string;
@@ -7,10 +5,10 @@ interface ExperienceItemProps {
   description?: string[];
   tags?: string[];
   logo?: string;
-  seeMoreLabel?: string;
+  eagerLogo?: boolean;
 }
 
-export function ExperienceItem({ 
+export function ExperienceItem({
   title = "Full Stack Developer Intern",
   company = "Dukaan (Rollout)",
   date = "July 2025 - Nov 2025",
@@ -22,11 +20,11 @@ export function ExperienceItem({
   ],
   tags = ["React", "Express.js", "MongoDB", "JWT", "OAuth", "Nginx", "Monaco Editor"],
   logo,
-  seeMoreLabel = "Ver más",
+  eagerLogo = false,
 }: ExperienceItemProps) {
   return (
     <div className="text-foreground py-4 transition-colors">
-      {/* Header Section - Always Visible */}
+      {/* Header Section */}
       <div className="flex flex-col gap-4 mb-4">
         <div className="flex justify-between items-start">
           <h3 className="text-xl font-semibold leading-none tracking-tight">
@@ -36,10 +34,10 @@ export function ExperienceItem({
             {date}
           </span>
         </div>
-        
+
         <div className="flex items-center gap-2">
             {logo ? (
-              <img src={logo} alt={company} className="size-6 rounded object-contain" />
+              <img src={logo} alt={company} loading={eagerLogo ? "eager" : "lazy"} decoding="async" className="size-6 rounded object-contain" />
             ) : (
               <div className="size-6 rounded bg-zinc-800 flex items-center justify-center text-[10px] text-white font-bold">
                   {company.charAt(0).toUpperCase()}
@@ -49,31 +47,28 @@ export function ExperienceItem({
         </div>
       </div>
 
-      <Accordion type="single" collapsible className="w-full">
-        <AccordionItem value="item-1" className="border-b-0">
-          <AccordionContent className="text-muted-foreground">
-             <div className="flex flex-col gap-4 py-4">
-                <div className="space-y-2 text-sm leading-relaxed">
-                    {description.map((desc, i) => (
-                        <p key={i}>{desc}</p>
-                    ))}
-                </div>
-                
-                <div className="flex flex-wrap gap-2 pt-2">
-                    {tags.map((tag) => (
-                        <span key={tag} className="inline-flex items-center px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground border border-border">
-                            {tag}
-                        </span>
-                    ))}
-                </div>
-             </div>
-          </AccordionContent>
-          
-          <AccordionTrigger className="justify-start gap-2 py-2 text-sm text-muted-foreground hover:text-foreground hover:no-underline data-[state=open]:text-foreground">
-            {seeMoreLabel}
-          </AccordionTrigger>
-        </AccordionItem>
-      </Accordion>
+      {/* Content - Always Visible */}
+      <div className="flex flex-col gap-4 text-muted-foreground">
+        <ul className="space-y-2 text-sm leading-relaxed">
+            {description.map((desc, i) => (
+                <li key={i} className="flex gap-2.5">
+                    <span
+                        className="mt-1.5 size-1.5 shrink-0 bg-muted-foreground/60"
+                        aria-hidden="true"
+                    />
+                    <span>{desc}</span>
+                </li>
+            ))}
+        </ul>
+
+        <div className="flex flex-wrap gap-2 pt-2">
+            {tags.map((tag) => (
+                <span key={tag} className="inline-flex items-center px-2.5 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground border border-border">
+                    {tag}
+                </span>
+            ))}
+        </div>
+      </div>
     </div>
   )
 }
