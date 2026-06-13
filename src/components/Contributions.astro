@@ -115,17 +115,7 @@ const weekCount = contributions?.weeks.length || 53;
         >
           {allDays.map((day) => (
             <div
-              class="w-full aspect-square bg-muted transition-all duration-200 ease-in-out cursor-pointer hover:scale-110
-              data-[level=0]:bg-border/50
-              data-[level=1]:bg-[hsl(142,76%,75%)]
-              data-[level=2]:bg-[hsl(142,76%,55%)]
-              data-[level=3]:bg-[hsl(142,76%,35%)]
-              data-[level=4]:bg-[hsl(142,76%,22%)]
-              dark:data-[level=0]:bg-muted-foreground/15
-              dark:data-[level=1]:bg-[hsl(142,65%,45%)]
-              dark:data-[level=2]:bg-[hsl(142,65%,38%)]
-              dark:data-[level=3]:bg-[hsl(142,65%,28%)]
-              dark:data-[level=4]:bg-[hsl(142,65%,20%)]"
+              class="contrib-day"
               data-level={day.level}
               data-count={day.count}
               data-date={day.date}
@@ -164,3 +154,30 @@ const weekCount = contributions?.weeks.length || 53;
     </div>
   )
 }
+
+<style>
+  /* Color map defined once instead of repeating the full class string on every
+     day cell — keeps the contributions grid from bloating the HTML by ~280KB. */
+  .contrib-day {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    background-color: color-mix(in oklab, var(--border) 50%, transparent);
+  }
+  .contrib-day:hover {
+    transform: scale(1.1);
+  }
+  .contrib-day[data-level="1"] { background-color: hsl(142 76% 75%); }
+  .contrib-day[data-level="2"] { background-color: hsl(142 76% 55%); }
+  .contrib-day[data-level="3"] { background-color: hsl(142 76% 35%); }
+  .contrib-day[data-level="4"] { background-color: hsl(142 76% 22%); }
+
+  :global(.dark) .contrib-day {
+    background-color: color-mix(in oklab, var(--muted-foreground) 15%, transparent);
+  }
+  :global(.dark) .contrib-day[data-level="1"] { background-color: hsl(142 65% 45%); }
+  :global(.dark) .contrib-day[data-level="2"] { background-color: hsl(142 65% 38%); }
+  :global(.dark) .contrib-day[data-level="3"] { background-color: hsl(142 65% 28%); }
+  :global(.dark) .contrib-day[data-level="4"] { background-color: hsl(142 65% 20%); }
+</style>
