@@ -4,6 +4,7 @@ export const translations = {
   es: {
     meta: {
       title: 'Neftali Hernández | Full Stack Developer',
+      description: 'Full Stack Developer especializado en React, Next.js, TypeScript y Node.js. Construyo aplicaciones web limpias y escalables, incluyendo agentes con IA (LLMs, RAG).',
     },
     theme: {
       ariaLabel: 'Cambiar tema',
@@ -120,6 +121,7 @@ export const translations = {
   en: {
     meta: {
       title: 'Neftali Hernández | Full Stack Developer',
+      description: 'Full Stack Developer specialized in React, Next.js, TypeScript, and Node.js. I build clean, scalable web applications, including AI-powered agents (LLMs, RAG).',
     },
     theme: {
       ariaLabel: 'Toggle theme',
